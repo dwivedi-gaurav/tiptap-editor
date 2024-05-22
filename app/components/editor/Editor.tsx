@@ -22,9 +22,8 @@ function Editor({
 
   useEffect(() => {
     if (!editor) return;
-    console.log("Inside Effect");
+
     if (content) {
-      console.log("content ===> ", content.noteHtml, typeof content.noteHtml);
       editor.commands.setContent(`${content.noteHtml}`);
     } else {
       editor.commands.setContent("<p>Write here...</p>");

@@ -1,5 +1,7 @@
 import "./styles/style.css";
 import { noteType } from "@/store/notesSlice";
+import { deleteNote } from "@/store/notesSlice";
+import { useAppDispatch } from "@/store";
 
 interface DisplayNotesProps {
   notes: noteType[];
@@ -8,6 +10,12 @@ interface DisplayNotesProps {
 }
 
 function DisplayNotes({ notes, setUpdateId }: DisplayNotesProps) {
+  const dispatch = useAppDispatch();
+
+  const onDeleteClick = (id: string) => {
+    dispatch(deleteNote(id));
+  };
+
   return (
     <div className="mt-8">
       <h4>Your Notes</h4>
@@ -32,7 +40,14 @@ function DisplayNotes({ notes, setUpdateId }: DisplayNotesProps) {
                     >
                       Edit
                     </button>
-                    <button className="btn-danger">Delete</button>
+                    <button
+                      className="btn-danger"
+                      onClick={() => {
+                        onDeleteClick(id);
+                      }}
+                    >
+                      Delete
+                    </button>
                   </div>
                 </div>
               );

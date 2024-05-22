@@ -9,20 +9,15 @@ import { useAppDispatch } from "@/store";
 
 function Notes() {
   const [updateId, setUpdateId] = useState("");
-  const [notesEditor, setNotesEditor] = useState(null);
   const dispatch = useAppDispatch();
 
   const { notes } = useAppSelector((state) => {
     return state.myNotes;
   });
 
-  console.log("updateId ===> ", updateId);
-
   const updateContent = !!updateId
     ? notes.find(({ id }) => id === updateId)
     : undefined;
-
-  console.log("updateContent ===> ", updateContent);
 
   const setNotesHtml = (noteHtml: string) => {
     if (updateId) {
