@@ -1,0 +1,25 @@
+.editorControls button:not(:last-child) {
+  margin-right: 0.5rem;
+}
+
+.editorControls button {
+  margin-top: 0.5rem;
+}
+
+.editorControls {
+  margin-bottom: 2rem;
+}
+
+.tiptap {
+  height: 400px;
+  @apply border-solid border-gray-700 border rounded p-4  focus-visible:shadow-xl focus-visible:border-blue-500;
+  overflow: auto;
+}
+
+.ProseMirror:focus {
+  outline: none;
+}
+
+.editorActions {
+  margin: 1rem 0;
+}

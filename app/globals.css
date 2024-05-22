@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn-default {
+  @apply bg-blue-500 hover:bg-blue-700 text-white px-4 rounded;
+}
+
+.btn-dark {
+  @apply bg-gray-700 hover:bg-gray-600 text-white px-4 rounded;
+}
+
+.btn-trans {
+  @apply hover:bg-gray-100 text-black px-4 rounded border-solid border-gray-700 border;
+}
+
+.btn-danger {
+  @apply bg-red-600 hover:bg-blue-700 text-white px-4 rounded;
+}
+
+@layer base {
+  h1 {
+    @apply text-6xl font-semibold;
+  }
+  h2 {
+    @apply text-5xl font-semibold;
+  }
+  h3 {
+    @apply text-4xl font-semibold;
+  }
+  h4 {
+    @apply text-3xl font-semibold;
+  }
+  h5 {
+    @apply text-2xl font-semibold;
+  }
+  h6 {
+    @apply text-xl font-semibold;
+  }
+  ul {
+    @apply list-disc;
+  }
+  ol {
+    @apply list-decimal;
+  }
+  ul,
+  ol {
+    margin-left: 1rem;
+  }
+  code {
+    @apply bg-gray-200;
+  }
+}
